@@ -1,0 +1,1 @@
+from .pillow_image_storage import PillowImageStorage

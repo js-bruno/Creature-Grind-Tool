@@ -1,7 +1,6 @@
 from time import sleep
 from creature_core.domain.exceptions import (
-    WindowAppNotFind,
-    FirstPartyCreatureFaintedException,
+    FirstPartyCreatureFaintedException
 )
 from creature_core.adapter import PyAutoGuiAdapter, PytesseractAdapter
 from creature_core.use_case import FirstPartyCreatureIsAlive, FindBattle, BattleMode
@@ -40,10 +39,11 @@ class AutoFarmController:
 
             # if not first_party_creature_is_alive:
             #     raise FirstPartyCreatureFaintedException()
-            find_battle.run()        
+            find_battle.run()
             in_battle: bool = battle_mode.run()
 
             if in_battle:
                 is_alive = first_party_creature_is_alive_use_case.run()
+                print(f"Creature is alive{is_alive}")
                 if not first_creature_defeated:
                     raise FirstPartyCreatureFaintedException()

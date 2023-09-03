@@ -10,12 +10,12 @@ class BattleMode:
         self._image_storage = image_storage
 
     def run(self,):
-        in_battle = self._autogui.locateOnScreen(image=self._image_storage.load_fight_button_image())
+        in_battle = self._autogui.locateOnScreen(image=self._image_storage.load_fight_button_image(), grayscale=True)
         while in_battle != None:
             self._open_attack_menu()
             sleep(1)
             self._attack_with_efficient_move()
-            in_battle = self._autogui.locateOnScreen(image=self._image_storage.load_fight_button_image())
+            in_battle = self._autogui.locateOnScreen(image=self._image_storage.load_fight_button_image(), grayscale=True)
         return False
 
     def _open_attack_menu(self):

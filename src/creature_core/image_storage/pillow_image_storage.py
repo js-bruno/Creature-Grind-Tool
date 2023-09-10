@@ -17,9 +17,8 @@ class PillowImageStorage(ImageStorage):
         close_modal_path = self._image_storage_path / "close_modal.png"
         return Image.open(close_modal_path)
 
-    def load_fight_button_image(self) -> Image:
+    def hp_label_battle_image(self) -> Image:
         fight_button_path = self._image_storage_path / "hp_battle.png"
-        print(Image.open(fight_button_path))
         # import pdb; pdb.set_trace()
         return Image.open(fight_button_path)
 

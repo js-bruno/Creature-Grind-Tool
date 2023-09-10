@@ -11,7 +11,7 @@ class ImageStorage(abc.ABC):
         ...
 
     @abc.abstractmethod
-    def load_fight_button_image():
+    def hp_label_battle_image():
         ...
 
     @abc.abstractmethod

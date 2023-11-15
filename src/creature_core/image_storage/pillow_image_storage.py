@@ -23,5 +23,5 @@ class PillowImageStorage(ImageStorage):
         return Image.open(fight_button_path)
 
     def load_super_effetive_image(self) -> Image:
-        super_effetive_path = self._image_storage_path / "supereffetive.png"
+        super_effetive_path = self._image_storage_path / "super_effective_battle.png"
         return Image.open(super_effetive_path)

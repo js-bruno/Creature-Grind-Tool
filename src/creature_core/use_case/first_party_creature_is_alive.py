@@ -53,15 +53,10 @@ class FirstPartyCreatureIsAlive:
         self._autogui.press("x")
         self._autogui.press("x")
         self._autogui.press("x")
-        # self._autogui.locateAndClick(self._close_modal_image, 0.9)
 
     def _print_and_find_creature_modal(self) -> list[int]:
-        # actual_screen_shot = self._autogui.screenshot()
-        # dialog_hp_modal = Image.open("./src/creature_core/repository/images/dialog_HP.png")
-        # cordenates = self._autogui.locateOnScreen(
-        #     Image.open("./src/creature_core/repository/images/dialog_HP.png"), confidence=0.9
-        # )
         cordenates = self._autogui.locateOnScreen(self._hp_modal_image, confidence=0.9)
+
         left, top, width, heigh = cordenates
         new_cords = []
         new_cords.append(left + 110)

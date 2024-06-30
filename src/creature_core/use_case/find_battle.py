@@ -1,6 +1,7 @@
-from time import sleep
-from creature_core.domain.adapter import Autogui
 from random import choice
+from time import sleep
+
+from creature_core.domain.adapter import Autogui
 
 
 class FindBattle:

@@ -1,7 +1,9 @@
 from pathlib import Path
+
 from PIL import Image
-from creature_core.settings import get_settings
+
 from creature_core.domain.file_storage import ImageStorage
+from creature_core.settings import get_settings
 
 
 class PillowImageStorage(ImageStorage):
@@ -9,8 +11,9 @@ class PillowImageStorage(ImageStorage):
         self._settings = get_settings()
         self._image_storage_path = Path(self._settings.IMAGE_LOCAL_STORAGE)
 
-    def load_hp_modal_image(self) -> Image:
+    def health_points_label_modal(self) -> Image:
         hp_modal_image_path = self._image_storage_path / "dialog_HP.png"
+        print(hp_modal_image_path)
         return Image.open(hp_modal_image_path)
 
     def load_close_modal_image(self) -> Image:

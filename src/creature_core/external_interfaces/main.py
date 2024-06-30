@@ -1,16 +1,13 @@
 import typer
+from simple_term_menu import TerminalMenu
 
-from creature_core.external_interfaces.apps.auto_farm import auto_farm_app
-
-app = typer.Typer()
-
-app.add_typer(auto_farm_app, name="auto-farm")
-
-
-@app.command()
-def good(name: str):
-    print(name)
-
+from creature_core.controller import AutoFarmController
 
 if __name__ == "__main__":
-    app()
+    options = ["auto-farm", "ev-up", "shine-hunt"]
+    terminal_menu = TerminalMenu(options)
+    menu_entry_index = terminal_menu.show()
+
+    if menu_entry_index == 0:
+        typer.echo("RUNNING AUTOFARMING!...")
+        AutoFarmController.auto_farm_start()

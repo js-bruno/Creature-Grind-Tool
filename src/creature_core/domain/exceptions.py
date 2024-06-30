@@ -5,6 +5,7 @@ class PokeCoreBaseException(Exception):
         self.message = message or self.message
         super().__init__(self.message)
 
+
 class WindowAppNotFind(PokeCoreBaseException):
     message = "The running application was not find"
 

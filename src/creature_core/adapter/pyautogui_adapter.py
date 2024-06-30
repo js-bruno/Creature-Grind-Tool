@@ -1,5 +1,6 @@
-from creature_core.domain.adapter import Autogui
 import pyautogui
+
+from creature_core.domain.adapter import Autogui
 
 
 class PyAutoGuiAdapter(Autogui):
@@ -11,6 +12,9 @@ class PyAutoGuiAdapter(Autogui):
 
     def locateOnScreen(self, *args, **kargs):
         return pyautogui.locateOnScreen(*args, **kargs)
+
+    def locateHpDialog(self) -> list:
+        return pyautogui.locateOnScreen()
 
     def locate(self, *args):
         return pyautogui.locate(*args)

@@ -1,7 +1,8 @@
 from random import choice
+from time import sleep
+
 from creature_core.domain.adapter import Autogui
 from creature_core.domain.file_storage import ImageStorage
-from time import sleep
 
 
 class BattleMode:

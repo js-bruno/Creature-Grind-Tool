@@ -3,7 +3,7 @@ import abc
 
 class ImageStorage(abc.ABC):
     @abc.abstractmethod
-    def load_hp_modal_image():
+    def health_points_label_modal():
         ...
 
     @abc.abstractmethod

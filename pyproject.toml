@@ -19,6 +19,8 @@ pytest-bdd = "^6.1.1"
 pytest-mock = "^3.10.0"
 python-xlib = "^0.33"
 python-dotenv = "^1.0.0"
+simple-term-menu = "^1.6.4"
+pyocr = "^0.8.5"
 
 [tool.poetry.dev-dependencies]
 black = "^23.3.0"

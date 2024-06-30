@@ -26,7 +26,7 @@ class AutoFarmController:
         first_party_creature_is_alive_use_case = FirstPartyCreatureIsAlive(
             game_input, autogui_adapter, optical_recognition_adapter, image_storage
         )
-        find_battle = FindBattle(autogui_adapter)
+        find_battle = FindBattle(game_input)
 
         first_creature_defeated = first_party_creature_is_alive_use_case.run()
         battle_mode = BattleMode(autogui_adapter, image_storage)

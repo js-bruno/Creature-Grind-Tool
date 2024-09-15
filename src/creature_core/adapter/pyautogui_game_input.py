@@ -49,7 +49,8 @@ class PyAutoGuiGameInput:
         sleep(0.3)
         pyautogui.keyUp("s")
         sleep(0.3)
-        
+
+    # ADD FALLBACK AND RETRY LOGIC
     def enhance_image_to_string(self, image):
         bright = ImageEnhance.Brightness(image)
         image = bright.enhance(1.5)
@@ -59,7 +60,8 @@ class PyAutoGuiGameInput:
 
         sharpner = ImageEnhance.Sharpness(image)
         image = sharpner.enhance(1.5)
-        txt = self._optical_recognition.image_to_string(image, config='--psm 3')
+        image.save("enhancer.png")
+        txt = self._optical_recognition.image_to_string(image)
         return txt
 
     def _open_creature_summary(self, creature_position: int):
@@ -80,7 +82,7 @@ class PyAutoGuiGameInput:
         left, top, width, heigh = cordenates
 
         new_cords = []
-        new_cords.append(left + 110)
+        new_cords.append(left + 140)
         new_cords.append(top + 0)
         new_cords.append(width - 30)
         new_cords.append(heigh + 0)

@@ -1,4 +1,3 @@
-from random import choice
 from time import sleep
 
 from creature_core.domain.adapter import GameInput

@@ -32,10 +32,18 @@ class BattleMode:
         super_effetive_move = self._autogui.locateOnScreen(
             self._image_storage.load_super_effetive_image()
         )
+
         if super_effetive_move != None:
             left_pos, top_pos = super_effetive_move
             self._autogui.click([left_pos, top_pos])
             return True
+        else:
+            effective_move = self._autogui.locateOnScreen(image =self._image_storage.load_effetive_image(), grayscale=true)
+            left_pos, top_pos = effective_move
+            self._autogui.click([left_pos, top_pos])
+            if effetive_move != None:
+                return True
+
         self._battle_move([1, 2, 3, 4])
 
     def _battle_move(self, random_move: list):

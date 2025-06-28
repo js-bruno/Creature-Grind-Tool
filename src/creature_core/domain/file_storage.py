@@ -17,3 +17,7 @@ class ImageStorage(abc.ABC):
     @abc.abstractmethod
     def load_super_effetive_image():
         ...
+
+    @abc.abstractmethod
+    def load_effetive_image():
+        ...

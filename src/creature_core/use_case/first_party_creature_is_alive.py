@@ -25,6 +25,7 @@ class FirstPartyCreatureIsAlive:
 
     def run(self):
         sleep(300 / 1000)
+        ##retry_process
         hp_creature_int = self._game_input.find_and_print_creature_health_points(0)
 
         if hp_creature_int > 0:
